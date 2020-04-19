@@ -43,10 +43,10 @@ class MLP(nn.Module):
             nn.LeakyReLU(inplace=True),
         )
 
-        def forward(self, x):
-            x = self.model(x)
+    def forward(self, x):
+        x = self.model(x)
 
-            return x
+        return x
 
 
 net = MLP()
