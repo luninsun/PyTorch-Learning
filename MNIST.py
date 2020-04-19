@@ -69,7 +69,7 @@ def main():
             optimizer.step()
 
             if batch % 100 == 0:
-                print('epoch: {}, loss: {}'.format(epoch, loss.item()))
+                print('batch: {}, \tloss: {}'.format(batch, loss.item()))
 
         test_loss = 0
         correct = 0
@@ -84,8 +84,8 @@ def main():
             correct += pred.eq(target).float().sum().item()
 
         test_loss /= len(test_loader.dataset)
-        print('\navg loss: {}, accuracy: {}'.format(
-            test_loss, correct / len(test_loader.dataset)))
+        print('\nepoch: {}, \tavg loss: {}, a\tccuracy: {}\n'.format(
+            epoch, test_loss, correct / len(test_loader.dataset)))
 
 
 if __name__ == "__main__":
