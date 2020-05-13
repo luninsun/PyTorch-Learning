@@ -102,7 +102,7 @@ def resnet34():
 
 def main():
     
-    x = torch.randn(2, 3, 32, 32)
+    x = torch.randn(2, 3, 224, 224)
     model = resnet18()
     out = model(x)
     print(model)
