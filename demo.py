@@ -1,4 +1,4 @@
-a = [1, 2, 3, 4, 5]
+from torchvision import models
 
-
-print(a[:-1])
+model = models.resnet18(pretrained=True)
+print(model.children())
